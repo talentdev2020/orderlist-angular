@@ -26,4 +26,9 @@ describe('DataAccessService', () => {
     const orders = await service.orders$.pipe(take(1)).toPromise;
     expect(Array.isArray(orders)).toBeTrue;
   });
+
+  it('should be return order items', async () => {
+    const items = await service.orderDetails$('1').pipe(take(1)).toPromise;
+    expect(Array.isArray(items)).toBeTrue;
+  });
 });
