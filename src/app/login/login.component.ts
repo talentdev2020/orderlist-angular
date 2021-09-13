@@ -9,21 +9,16 @@ import { AuthenticationService } from '../authentication.service';
 export class LoginComponent implements OnInit {
   username = 'joe@test.com';
   password = '12345';
-
+  isLoggedin: boolean;
   constructor(private auth: AuthenticationService) {
-    
+    this.isLoggedin = false;
    }
 
   ngOnInit(): void {
   }
 
   async onLogin() {
-    console.log("s")
-    const response = await this.auth.login(this.username, this.password);
-    console.log(response)
-    if (response) {
-      console.log("true")
-    }
+    this.isLoggedin = await this.auth.login(this.username, this.password);
   }
 
 }

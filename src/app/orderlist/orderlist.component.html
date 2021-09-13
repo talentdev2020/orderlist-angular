@@ -1,0 +1,16 @@
+<div class="center">
+    <h2>Order List </h2>
+</div>
+<kendo-grid
+      [kendoGridBinding]="gridView"
+      kendoGridSelectBy="id"
+      [selectedKeys]="mySelection"
+      [sortable]="true"
+      [reorderable]="true"
+      [resizable]="true"
+      [height]="500"
+     >
+        <kendo-grid-column field="customerName" title="Customer Name" [width]="220"></kendo-grid-column>
+        <kendo-grid-column field="totalOrder" title="Total Order" [width]="220"></kendo-grid-column>
+        <kendo-grid-column field="status" title="Status" [width]="220"></kendo-grid-column> 
+</kendo-grid>
