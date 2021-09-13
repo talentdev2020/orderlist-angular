@@ -1,0 +1,22 @@
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 10px;
+
+    .form-control {
+        padding: 10px;
+    }
+}
+
+.btn-login {
+    padding: 15px;
+}
