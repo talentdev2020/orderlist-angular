@@ -7,6 +7,7 @@ import { delay, map } from 'rxjs/operators';
 })
 export class AuthenticationService {
   private readonly internalStatus$ = new BehaviorSubject<string | undefined>(undefined);
+  isAuthenticated = false;
 
   constructor() {}
 
@@ -19,6 +20,7 @@ export class AuthenticationService {
         map(([username, password]) => {
           const success = username?.toLowerCase() === 'joe@test.com' && password === '12345';
           this.internalStatus$.next(success ? username : undefined);
+          this.isAuthenticated = success;
           return success;
         })
       )

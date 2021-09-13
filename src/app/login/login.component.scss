@@ -11,12 +11,18 @@
 
 .form-group {
     margin-bottom: 10px;
-
+    display: flex;
     .form-control {
         padding: 10px;
+    }
+
+    .label {
+        width: 120px;
+        display: flex;
+        align-items: center;
     }
 }
 
 .btn-login {
-    padding: 15px;
+    padding: 10px 20px;
 }
