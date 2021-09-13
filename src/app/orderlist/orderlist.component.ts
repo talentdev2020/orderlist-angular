@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { DataAccessService } from '../data-access.service';
 import { OrderSummary } from "../data-access.service";
 import { OrderItem } from "../data-access.service";
@@ -10,10 +10,9 @@ import { Router } from '@angular/router';
   templateUrl: './orderlist.component.html',
   styleUrls: ['./orderlist.component.scss']
 })
+
 export class OrderlistComponent implements OnInit {
   public gridView: any[] = [];
- 
-
   public mySelection: string[] = [];
   
   constructor(private router: Router, private service: DataAccessService, private auth: AuthenticationService) {

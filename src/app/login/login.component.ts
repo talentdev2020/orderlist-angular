@@ -20,11 +20,11 @@ export class LoginComponent implements OnInit {
 
   async onLogin() {
     const isLoggedin = await this.auth.login(this.username, this.password);
+   
     if (isLoggedin) {
       this.router.navigate(["orderlist"]);
     } else {
       alert("Wrong username or password");
     }
   }
-
 }
